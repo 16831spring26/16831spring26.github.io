@@ -60,14 +60,26 @@
 <body>
 
   <header>
-    <h1>16-831: Project Proposal</h1>
+    <h1>Antman: Hierarchical Policy Transfer from
+Point-Mass to Quadrupedal Agents</h1>
     <h2>Felipe San Martín Vásquez, Saswat Subhajyoti Mallick, Srinath Ravi</h2>
   </header>
 
   <section>
     <p>
-      In this project, we will explore reinforcement learning agents in the Ant Maze and Point Maze environments. 
-      This proposal focuses on evaluating the performance of a random agent as a baseline before training RL agents.
+      This project explores hierarchical policy transfer by training navigation
+policies in a simple Point Maze environment and attempting to transfer them to a
+complex Ant Maze with a quadrupedal agent. Although the maze layouts are iden-
+tical, these environments have very different action spaces. The Point agent uses
+2D linear forces while the Ant agent requires 8-dimensional joint torques. We
+will implement two modifications to facilitate this transfer: (1) an action space
+alignment module that translates Point agent commands to Ant joint torques, and
+(2) state space discretization to speed up learning. We will train three types of RL
+algorithms. On-policy policy gradient, off-policy Q-learning, and model-based
+RL, on the Point Maze and evaluate how well they transfer to the Ant Maze.
+This project is inspired by work on hierarchically decoupled imitation for mor-
+phological transfer and aims to help us understand how high-level policies can be
+separated from low-level control.
     </p>
   </section>
 
